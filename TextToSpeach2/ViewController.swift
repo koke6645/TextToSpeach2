@@ -26,9 +26,16 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate {
     @IBAction func speach(sender: AnyObject) {
         var utterance = AVSpeechUtterance(string: textBox.text)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        //utterance.voice = AVSpeechSynthesisVoice(language: "en-AU")
+        //utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        //utterance.voice = AVSpeechSynthesisVoice(language: "en-IE")
+        
         utterance.rate = currentSpeed
         self.synthersizer.delegate = self
-        synthersizer.speakUtterance(utterance)
+        
+        if !synthersizer.speaking {
+            synthersizer.speakUtterance(utterance)
+        }
         
     }
     
@@ -45,6 +52,7 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //textBox.text = "Step inside magnificent lobbies, corridors, and the underground Pedway system for an in-depth, personal approach to a Chicago architecture walking tour downtown. Available six days a week, the Loop Interior Architecture Walking Tour takes you on a creative route that weaves through buildings and secret short-cuts. 95% of the tour takes places in heated interiors."
     }
 
     override func didReceiveMemoryWarning() {
