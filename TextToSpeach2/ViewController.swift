@@ -39,6 +39,14 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate {
         
     }
     
+    @IBAction func stopSpeak(sender: UIButton) {
+        if synthersizer.speaking {
+            synthersizer.stopSpeakingAtBoundary(.Immediate)
+        }
+        
+    }
+    
+    
     func speechSynthesizer(synthesizer: AVSpeechSynthesizer!, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance!) {
         let mutableAttributedString = NSMutableAttributedString(string: utterance.speechString)
         mutableAttributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: characterRange)
@@ -52,7 +60,8 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //textBox.text = "Step inside magnificent lobbies, corridors, and the underground Pedway system for an in-depth, personal approach to a Chicago architecture walking tour downtown. Available six days a week, the Loop Interior Architecture Walking Tour takes you on a creative route that weaves through buildings and secret short-cuts. 95% of the tour takes places in heated interiors."
+        textBox.attributedText = NSMutableAttributedString(string: "Step inside magnificent lobbies, corridors, and the underground Pedway system for an in-depth, personal approach to a Chicago architecture walking tour downtown. Available six days a week, the Loop Interior Architecture Walking Tour takes you on a creative route that weaves through buildings and secret short-cuts. 95% of the tour takes places in heated interiors.")
+        //textBox.attributedText = NSMutableAttributedString(string: "Step inside magnificent lobbies, corridors, and the underground Pedway system for an in-depth, personal approach to a Chicago architecture walking tour downtown. Available six days a week, the Loop Interior Architecture Walking Tour takes you on a creative route that weaves through buildings and secret short-cuts. Ninety-five percent of the tour takes places in heated interiors.")
     }
 
     override func didReceiveMemoryWarning() {
