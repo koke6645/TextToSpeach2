@@ -18,40 +18,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fast" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If3-G5-1fn">
-                                <rect key="frame" x="220" y="301" width="48" height="37"/>
+                                <rect key="frame" x="220" y="373" width="48" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vz-bY-yl5">
-                                <rect key="frame" x="16" y="301" width="43" height="37"/>
+                                <rect key="frame" x="16" y="373" width="43" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This text is used as an example." translatesAutoresizingMaskIntoConstraints="NO" id="jJ4-t9-ceb">
-                                <rect key="frame" x="28" y="43" width="240" height="160"/>
+                                <rect key="frame" x="28" y="43" width="240" height="186"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hab-8p-8Wz">
-                                <rect key="frame" x="16" y="435" width="252" height="29"/>
-                                <segments>
-                                    <segment title="Low"/>
-                                    <segment title="Normal"/>
-                                    <segment title="High"/>
-                                </segments>
-                            </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.30000000000000004" minValue="0.10000000000000001" maxValue="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="ufp-m8-pOn">
-                                <rect key="frame" x="26" y="355" width="226" height="31"/>
+                                <rect key="frame" x="26" y="407" width="226" height="31"/>
                                 <connections>
                                     <action selector="sliderSpeedChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="LKd-ZC-itE"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-24-pAP">
-                                <rect key="frame" x="123" y="265" width="33" height="30"/>
+                                <rect key="frame" x="99" y="304" width="87" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -59,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ly-kA-S3c">
-                                <rect key="frame" x="82" y="211" width="121" height="46"/>
+                                <rect key="frame" x="82" y="237" width="121" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Speak">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
