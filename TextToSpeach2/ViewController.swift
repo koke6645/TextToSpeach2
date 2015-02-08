@@ -33,19 +33,24 @@ class ViewController: UIViewController, AVSpeechSynthesizerDelegate {
         utterance.rate = currentSpeed
         self.synthersizer.delegate = self
         
-        if !synthersizer.speaking {
+        if !synthersizer.continueSpeaking() {
             synthersizer.speakUtterance(utterance)
         }
         
     }
     
     @IBAction func stopSpeak(sender: UIButton) {
-        if synthersizer.speaking {
-            synthersizer.stopSpeakingAtBoundary(.Immediate)
+        if synthersizer.continueSpeaking() {
+            synthersizer.stopSpeakingAtBoundary(.Word)
         }
         
     }
     
+    @IBAction func pauseSpeak(sender: AnyObject) {
+        if synthersizer.continueSpeaking() {
+            synthersizer.pauseSpeakingAtBoundary(.Word)
+        }
+    }
     
     func speechSynthesizer(synthesizer: AVSpeechSynthesizer!, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance!) {
         let mutableAttributedString = NSMutableAttributedString(string: utterance.speechString)
