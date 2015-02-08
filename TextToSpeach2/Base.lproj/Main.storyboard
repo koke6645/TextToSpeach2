@@ -29,8 +29,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This text is used as an example." translatesAutoresizingMaskIntoConstraints="NO" id="jJ4-t9-ceb">
-                                <rect key="frame" x="28" y="43" width="240" height="186"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="This text is used as an example." translatesAutoresizingMaskIntoConstraints="NO" id="jJ4-t9-ceb">
+                                <rect key="frame" x="28" y="43" width="240" height="78"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
